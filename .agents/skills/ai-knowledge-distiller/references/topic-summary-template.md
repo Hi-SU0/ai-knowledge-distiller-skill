@@ -1,0 +1,47 @@
+# Topic Summary Template
+
+Topic summaries synthesize knowledge around a subject, not a creator. Reorganize ideas into a coherent framework instead of concatenating source summaries.
+
+```markdown
+---
+type: topic-summary
+topic:
+status: growing
+updated:
+sources: []
+tags:
+  - 主题综述
+---
+
+# 主题名称
+
+## 这个主题解决什么问题
+
+## 整体知识框架
+
+## 核心概念及其关系
+
+## 从基础到进阶的理解路径
+
+## 不同来源分别贡献了什么
+
+## 多个来源的共识
+
+## 观点的发展、变化与冲突
+
+## 存在的争议与待验证内容
+
+## 实践路线
+
+## 推荐学习顺序
+
+## 相关来源和概念
+```
+
+## Writing rules
+
+- Center the article on a stable topic such as LLM foundations, prompt engineering, RAG, agents, multimodality, training, deployment, products, evaluation, or safety.
+- Link every important source contribution back to its source note.
+- Distinguish consensus, synthesis, inference, and disagreement.
+- Explain dependencies and recommended order; do not sort only by publication date.
+- Update incrementally and preserve valid human-written synthesis.

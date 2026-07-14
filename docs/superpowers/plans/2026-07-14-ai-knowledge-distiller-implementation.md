@@ -56,7 +56,7 @@ Expected: missing-file output because implementation has not been created.
 - [ ] **Step 1: Run the official initializer**
 
 ```powershell
-python C:\Users\SUO\.codex\skills\.system\skill-creator\scripts\init_skill.py ai-knowledge-distiller --path .agents/skills --resources scripts,references,assets
+python "$CODEX_HOME/skills/.system/skill-creator/scripts/init_skill.py" ai-knowledge-distiller --path .agents/skills --resources scripts,references,assets
 ```
 
 - [ ] **Step 2: Write detailed references and assets**
@@ -100,7 +100,7 @@ Place `[中文](README.md) | [English](README_EN.md)` at the top of both files. 
 - [ ] **Step 1: Run official validator**
 
 ```powershell
-python C:\Users\SUO\.codex\skills\.system\skill-creator\scripts\quick_validate.py .agents/skills/ai-knowledge-distiller
+python "$CODEX_HOME/skills/.system/skill-creator/scripts/quick_validate.py" .agents/skills/ai-knowledge-distiller
 ```
 
 Expected: valid skill.
