@@ -1,48 +1,44 @@
-# AI Knowledge Distiller Skill
+<p align="center">
+  <img src="assets/readme/hero.svg" alt="AI Knowledge Distiller：把可靠 AI 来源转化为可追溯、去重且可持续维护的 Obsidian 知识网络" width="100%">
+</p>
 
 [中文](README.md) | [English](README_EN.md)
 
-一个用于将 AI 领域的视频、文章、课程、播客、论文、官方文档和 GitHub 项目蒸馏为结构化 Obsidian 知识库的可复用 Agent Skill。
+把可靠的 AI 来源变成可追溯、可复用、可维护的 Obsidian 知识网络：保留每个来源的语义与证据，同时持续更新全局共享知识。
 
-它以知识主题为中心维护全局原子概念、主题综述、观点对比、知识地图和来源追溯，避免为不同创作者重复创建同一概念。
+## 先看格式证明
 
-## 适用场景
+<p align="center">
+  <img src="assets/readme/proof.svg" alt="两种互补输出：可追溯的来源笔记与跨来源更新的全局概念笔记" width="100%">
+</p>
 
-- 把可靠的 AI 来源材料转化为结构化 Obsidian 笔记。
-- 提取或增量更新全局原子概念。
-- 融合多个来源，编写主题综述和学习路线。
-- 比较不同创作者的定义、类比、技术路线和观点冲突。
-- 审核来源完整度、过时信息、重复概念和失效双向链接。
+[查看来源笔记格式示例](examples/example-source-note.md) · [查看全局概念笔记格式示例](examples/example-concept-note.md)
 
-## 项目结构
+这两个示例使用虚构来源材料演示格式和行为，不代表生产环境结果。可靠材料先成为带完整度、证据标签和定位信息的来源笔记，再更新全局共享的概念、主题、对比与知识地图，而不是为每位创作者复制一套知识。
 
-```text
-ai-knowledge-distiller-skill/
-├─ .agents/skills/ai-knowledge-distiller/
-│  ├─ SKILL.md
-│  ├─ references/
-│  │  ├─ vault-structure.md
-│  │  ├─ source-processing-workflow.md
-│  │  ├─ source-note-template.md
-│  │  ├─ concept-note-template.md
-│  │  ├─ topic-summary-template.md
-│  │  ├─ creator-index-template.md
-│  │  └─ quality-checklist.md
-│  ├─ assets/obsidian-templates/
-│  └─ scripts/README.md
-├─ tests/skill-scenarios.md
-├─ examples/
-├─ README.md
-├─ README_EN.md
-├─ LICENSE
-└─ .gitignore
-```
+## 为什么它不同
 
-## 安装方法
+- 来源层保留“谁说了什么、材料是否完整、证据在哪里”；知识层只承载可复用的全局结构。
+- 同一概念在不同来源中的解释进入同一份规范笔记，仍按来源分别保留共识、差异、观点和时效性。
+- 新内容以增量方式进入已有 Vault：先读取现状，再更新相关笔记、索引和链接。
 
-### 作为仓库级 Skill 使用
+## 工作流程
 
-将本仓库的 `.agents/skills/ai-knowledge-distiller` 保留在目标仓库中。Codex 在该仓库工作时可以发现并按任务触发它。
+<p align="center">
+  <img src="assets/readme/workflow.svg" alt="五步知识蒸馏流程：获取来源、核验证据、重构知识、全局去重、持续维护" width="100%">
+</p>
+
+1. **SOURCE · 获取来源**：优先使用官方字幕、原始文章或论文、官方文档和仓库代码。
+2. **VERIFY · 核验证据**：记录已取得与缺失的材料、完整度、定位信息和待验证内容。
+3. **RESTRUCTURE · 重构知识**：重建问题、受众、论证、案例和结论，而不是逐行压缩文字稿。
+4. **DEDUPLICATE · 全局去重**：复用规范概念，避免按创作者、语言或缩写建立知识孤岛。
+5. **MAINTAIN · 持续维护**：修复链接、刷新地图与综述，并记录冲突、缺口和学习顺序。
+
+## 快速开始
+
+### 仓库级 Skill
+
+最短路径是克隆仓库；Skill 位于 `.agents/skills/ai-knowledge-distiller`，Codex 在该仓库工作时可以发现它。
 
 ```powershell
 git clone https://github.com/Hi-SU0/ai-knowledge-distiller-skill.git
@@ -50,86 +46,83 @@ git clone https://github.com/Hi-SU0/ai-knowledge-distiller-skill.git
 
 也可以只把 `.agents/skills/ai-knowledge-distiller` 复制到已有项目的同名路径。
 
-### 复制到用户级 Skill 目录
+### 用户级 Skill
 
 将 `.agents/skills/ai-knowledge-distiller` 整个目录复制到：
 
 - Windows：`$HOME\.codex\skills\ai-knowledge-distiller`
 - macOS / Linux：`~/.codex/skills/ai-knowledge-distiller`
 
-重新打开 Codex 任务后即可使用。不同 Codex 版本的用户级目录约定可能变化，请以当前产品文档为准。
+复制后请打开一个新的 Codex 任务。用户级目录可能随 Codex 版本变化，请以当前产品文档为准。
 
-## 在 Codex 中调用
-
-可以显式指定 Skill：
+### 首次调用
 
 ```text
-请使用 $ai-knowledge-distiller，把这份 AI Agent 官方字幕蒸馏进我的 Obsidian Vault，并更新已有概念而不是创建重复文件。
+请使用 $ai-knowledge-distiller，把这份 AI Agent 官方文字稿蒸馏进我的 Obsidian Vault：保留来源与证据，更新已有概念、主题和对比笔记，而不是创建重复文件。
 ```
 
-也可以自然描述与其触发场景一致的任务，Codex 可根据 Skill 的 description 自动选择。
+## 安全源于设计
 
-更多示例：
+- **来源完整度**：明确记录取得了什么、缺少什么；材料不足时只处理可可靠验证的部分，不补写缺失正文。
+- **证据与追溯**：区分来源明确陈述、合理推导、创作者个人观点、外部补充、暂未验证和可能已经过时，并尽量保留链接、日期、章节、页码或时间戳。
+- **自动文字稿安全**：用户提供的 ASR/自动文字稿只作为辅助证据；须对照来源页面与权威资料核验术语，无法可靠纠正时保留不确定性，绝不把损坏文本当作逐字原话引用。
+- **全局别名扫描**：新建概念前检查中文名、英文名、缩写、拼写变体和别名，语义相同则更新规范笔记。
+- **人工编辑保护**：先读取已有笔记，保留有效人工内容并增量合并；未经明确授权不覆盖或删除。
+- **小样本与五来源维护**：批量处理前先验证少量代表性样本；每处理五个来源，执行去重、链接、地图、综述、冲突、缺口和学习顺序维护。
+
+## 限制与适用范围
+
+### 适合的任务
+
+- 蒸馏可靠的 AI 视频文字稿、文章、课程、播客文字稿、论文、官方文档或代码仓库。
+- 创建或更新来源笔记、原子概念、主题综述、观点对比、创作者索引和知识地图。
+- 审核重复概念、过时声明、来源缺失和失效 Wiki 链接。
+
+它不适合不需要 AI 知识蒸馏或来源管理的普通笔记排版，也不用于绕过平台限制、受保护媒体下载或大规模抓取。
+
+### v0.1 的当前限制
+
+`v0.1` 是指令驱动的 Skill：
+
+- 不会自动下载 Bilibili 或 YouTube 媒体。
+- 不执行自动语音识别（ASR）。
+- 不提供批量文字稿提取或 Vault 维护脚本。
+- 获取不到字幕或原始内容时不得编造，只能处理可可靠验证的部分。
+
+## 仓库导航
+
+<details>
+<summary>查看紧凑目录与关键文档</summary>
 
 ```text
-使用 $ai-knowledge-distiller 对比这两位创作者对 MCP 的定义，保留各自出处，并更新全局 MCP 概念笔记。
+ai-knowledge-distiller-skill/
+├─ .agents/skills/ai-knowledge-distiller/
+│  ├─ SKILL.md
+│  ├─ references/
+│  └─ assets/obsidian-templates/
+├─ assets/readme/
+├─ examples/
+├─ tests/skill-scenarios.md
+├─ README.md
+└─ README_EN.md
 ```
 
-```text
-使用 $ai-knowledge-distiller 检查这个 AI 知识库中的重复概念、待验证内容和失效 Obsidian 链接，只输出安全的增量修改。
-```
+- [Skill 行为说明](.agents/skills/ai-knowledge-distiller/SKILL.md)
+- [Vault 结构、命名与迁移规则](.agents/skills/ai-knowledge-distiller/references/vault-structure.md)
+- [来源笔记示例](examples/example-source-note.md) 与 [全局概念笔记示例](examples/example-concept-note.md)
+- [Obsidian 模板目录](.agents/skills/ai-knowledge-distiller/assets/obsidian-templates/)
+- [场景测试](tests/skill-scenarios.md)
 
-## 触发与不触发示例
+</details>
 
-适合触发：
+## 路线图
 
-- “蒸馏这篇 RAG 论文并更新我的全局概念卡片。”
-- “把官方课程文字稿整理为来源笔记、主题综述和学习路线。”
-- “比较两位创作者对 AI Agent 的观点差异。”
+- 非破坏性的 Vault 清单与维护报告。
+- 用户提供或官方导出的文字稿导入器。
+- 概念别名、重复候选和 Wiki 链接检查器。
+- Frontmatter、来源完整度和五来源维护周期验证器。
 
-不适合触发：
-
-- “下载 100 个 B 站视频并绕过平台限制。”
-- “从这段音频自动生成字幕。”
-- “只根据标题猜测这个视频讲了什么。”
-
-## Obsidian Vault 配置
-
-建议在 Vault 中建立 `AI知识库`，并采用 [知识库结构说明](.agents/skills/ai-knowledge-distiller/references/vault-structure.md) 中的全局目录。来源笔记按“内容类型 + 创作者或机构”存放；原子概念、主题综述、观点对比和知识地图全局共用。
-
-可将 [Obsidian 模板目录](.agents/skills/ai-knowledge-distiller/assets/obsidian-templates/) 中的文件复制到 Vault 的模板文件夹，再在 Obsidian 的模板设置中选择该文件夹。
-
-## 设计原则
-
-- 不根据标题、封面或简介编造正文内容。
-- 优先使用官方字幕、原始文章、原始论文、官方文档和仓库代码。
-- 自动字幕必须校对后才能进入知识库。
-- 明确区分来源陈述、合理推导、创作者观点和外部补充。
-- 新建概念前扫描中文名、英文名、缩写和别名。
-- 不覆盖有效的人工修改；信息不足时明确标记完整度和缺失材料。
-- 先用少量样本验证流程，每处理五个来源执行一次维护。
-
-## 当前限制
-
-当前 `v0.1` 以指令型 Skill 为主：
-
-- 尚未自动下载 B 站或 YouTube 视频。
-- 尚未自动进行语音识别。
-- 尚未提供批量字幕提取和知识库维护脚本。
-- 获取不到字幕或原始内容时不得编造内容，只能处理可可靠验证的部分。
-
-## 后续开发计划
-
-- 增加非破坏性的 Vault 清单与维护报告工具。
-- 增加用户提供字幕或官方导出字幕的导入器。
-- 增加概念别名、重复候选和 Obsidian 链接检查器。
-- 增加 Frontmatter、来源完整度和五来源维护周期验证。
-
-任何自动化都应保留人工修改、默认只报告候选变更，并为移动、合并或删除提供明确记录。
-
-## 测试
-
-[场景测试](tests/skill-scenarios.md) 定义了完整字幕、无字幕、错误自动字幕、同义概念、来源冲突、大批量请求和人工笔记保护等行为契约。发布前还应检查 Skill Frontmatter、相对链接、模板格式、隐私信息和目录结构。
+未来自动化仍应保护人工编辑、默认报告候选变更，并记录每次移动、合并或删除。
 
 ## License
 
