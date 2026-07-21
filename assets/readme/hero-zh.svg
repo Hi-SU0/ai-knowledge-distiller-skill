@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">AI 知识蒸馏器知识网络</title>
+  <desc id="hero-desc">可靠的视频、论文、文档和 GitHub 来源汇入共享的 RAG 概念，再连接为 Obsidian 中的来源笔记、主题地图和观点对比。</desc>
+  <rect width="1200" height="420" fill="#191727"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif">
+    <rect x="48" y="38" width="1104" height="344" rx="26" fill="#F4F1FF" fill-opacity="0.03" stroke="#A9A2C8" stroke-opacity="0.30" stroke-width="1.5"/>
+
+    <text x="82" y="94" fill="#F4F1FF" font-size="42" font-weight="700" letter-spacing="-0.6">AI 知识蒸馏器</text>
+    <text x="84" y="128" fill="#A9A2C8" font-size="20">一个来源，一个概念，一张持续生长的知识网络。</text>
+    <g transform="translate(879 67)">
+      <rect width="237" height="36" rx="18" fill="#191727" stroke="#7668FF" stroke-width="1.5"/>
+      <circle cx="20" cy="18" r="5" fill="#35C7A5"/>
+      <text x="34" y="24" fill="#F4F1FF" font-size="16" font-weight="600" letter-spacing="0.7">AGENT SKILL  ·  OBSIDIAN</text>
+    </g>
+
+    <text x="84" y="176" fill="#A9A2C8" font-size="18" font-weight="700" letter-spacing="1.4">可靠来源</text>
+    <g fill="#F4F1FF" fill-opacity="0.04" stroke="#A9A2C8" stroke-opacity="0.38" stroke-width="1.5">
+      <rect x="84" y="190" width="286" height="32" rx="10"/>
+      <rect x="84" y="230" width="286" height="32" rx="10"/>
+      <rect x="84" y="270" width="286" height="32" rx="10"/>
+      <rect x="84" y="310" width="286" height="32" rx="10"/>
+    </g>
+    <g fill="#F4F1FF" font-size="18" font-weight="650">
+      <text x="120" y="213">视频</text>
+      <text x="120" y="253">论文</text>
+      <text x="120" y="293">文档</text>
+      <text x="120" y="333">GITHUB</text>
+    </g>
+    <g fill="#35C7A5">
+      <circle cx="101" cy="206" r="4"/><circle cx="101" cy="246" r="4"/>
+      <circle cx="101" cy="286" r="4"/><circle cx="101" cy="326" r="4"/>
+    </g>
+
+    <g fill="none" stroke="#7668FF" stroke-width="2">
+      <path d="M370 206 H394 Q414 206 428 230 L444 248"/>
+      <path d="M370 246 H400 Q420 246 444 263"/>
+      <path d="M370 286 H404 Q422 286 444 279"/>
+      <path d="M370 326 H394 Q414 326 428 304 L444 291"/>
+    </g>
+    <g fill="#7668FF"><circle cx="394" cy="206" r="4"/><circle cx="394" cy="326" r="4"/></g>
+
+    <g transform="translate(444 211)">
+      <rect width="244" height="134" rx="14" fill="#7668FF" fill-opacity="0.22" stroke="#7668FF" stroke-width="2"/>
+      <rect x="18" y="17" width="128" height="25" rx="12.5" fill="#35C7A5"/>
+      <text x="82" y="35" fill="#191727" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="1">全局概念</text>
+      <text x="122" y="86" fill="#F4F1FF" font-size="34" font-weight="750" text-anchor="middle">[[RAG]]</text>
+      <text x="122" y="113" fill="#A9A2C8" font-size="18" text-anchor="middle">一个规范节点</text>
+    </g>
+
+    <g fill="none" stroke="#35C7A5" stroke-width="2">
+      <path d="M688 247 H726 Q746 247 746 225 H772"/>
+      <path d="M688 278 H772"/>
+      <path d="M688 309 H726 Q746 309 746 331 H772"/>
+    </g>
+    <g fill="#35C7A5"><circle cx="746" cy="225" r="4"/><circle cx="746" cy="278" r="4"/><circle cx="746" cy="331" r="4"/></g>
+
+    <text x="774" y="176" fill="#A9A2C8" font-size="18" font-weight="700" letter-spacing="1.4">关联知识</text>
+    <g fill="#F4F1FF" fill-opacity="0.04" stroke="#A9A2C8" stroke-opacity="0.38" stroke-width="1.5">
+      <rect x="772" y="194" width="344" height="62" rx="12"/>
+      <rect x="772" y="264" width="344" height="62" rx="12"/>
+      <rect x="772" y="334" width="344" height="30" rx="12"/>
+    </g>
+    <g fill="#F4F1FF" font-size="20" font-weight="650">
+      <text x="798" y="221">来源笔记</text>
+      <text x="798" y="291">主题地图</text>
+      <text x="798" y="357" font-size="18">观点对比</text>
+    </g>
+    <g fill="#A9A2C8" font-size="16" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end">
+      <text x="1090" y="243">来源 · 证据</text>
+      <text x="1090" y="313">链接 · 上下文</text>
+      <text x="1090" y="357">共识 / 分歧</text>
+    </g>
+  </g>
+</svg>

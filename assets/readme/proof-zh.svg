@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="proof-title proof-desc">
+  <title id="proof-title">来源笔记与全局概念格式示例</title>
+  <desc id="proof-desc">注释式示例板展示仓库中的来源笔记和概念笔记结构，包括来源追溯、完整度、时间戳、证据标签、别名、共享概念、来源归属、共识与分歧。</desc>
+  <rect width="1200" height="520" fill="#191727"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif">
+    <text x="52" y="78" fill="#F4F1FF" font-size="30" font-weight="700">可追溯笔记，共享概念</text>
+    <g transform="translate(920 48)">
+      <rect width="228" height="38" rx="19" fill="#F4F1FF" fill-opacity="0.04" stroke="#35C7A5" stroke-width="1.5"/>
+      <text x="114" y="26" fill="#35C7A5" font-size="18" font-weight="750" text-anchor="middle" letter-spacing="1.2">格式示例</text>
+    </g>
+
+    <text x="600" y="108" fill="#A9A2C8" font-size="18" text-anchor="middle">结构演示 · 不代表采用量或性能结果</text>
+
+    <rect x="48" y="122" width="536" height="350" rx="24" fill="#F4F1FF" fill-opacity="0.03" stroke="#A9A2C8" stroke-opacity="0.30" stroke-width="1.5"/>
+    <rect x="616" y="122" width="536" height="350" rx="24" fill="#F4F1FF" fill-opacity="0.03" stroke="#A9A2C8" stroke-opacity="0.30" stroke-width="1.5"/>
+
+    <g transform="translate(72 146)">
+      <circle cx="9" cy="10" r="7" fill="#35C7A5"/>
+      <text x="30" y="18" fill="#F4F1FF" font-size="22" font-weight="700">来源笔记</text>
+      <text x="464" y="18" fill="#A9A2C8" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end">example-source-note.md</text>
+
+      <rect x="0" y="42" width="488" height="116" rx="12" fill="#191727" stroke="#A9A2C8" stroke-opacity="0.38"/>
+      <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">
+        <text x="18" y="68" fill="#A9A2C8">类型:</text><text x="130" y="68" fill="#F4F1FF">source-note</text>
+        <text x="18" y="92" fill="#A9A2C8">来源 ID:</text><text x="130" y="92" fill="#F4F1FF">example-video-001</text>
+        <text x="18" y="116" fill="#A9A2C8">处理日期:</text><text x="130" y="116" fill="#F4F1FF">2026-07-14</text>
+        <text x="18" y="140" fill="#A9A2C8" font-size="18">完整度:</text><text x="130" y="140" fill="#35C7A5" font-size="18">高</text>
+      </g>
+      <g transform="translate(0 176)">
+        <rect width="232" height="64" rx="12" fill="#F4F1FF" fill-opacity="0.04" stroke="#A9A2C8" stroke-opacity="0.38"/>
+        <text x="18" y="26" fill="#A9A2C8" font-size="18" font-weight="700" letter-spacing="1">来源追溯</text>
+        <text x="18" y="49" fill="#F4F1FF" font-size="18">创作者 · 平台 · 来源</text>
+        <rect x="248" width="240" height="64" rx="12" fill="#F4F1FF" fill-opacity="0.04" stroke="#A9A2C8" stroke-opacity="0.38"/>
+        <text x="266" y="26" fill="#A9A2C8" font-size="18" font-weight="700" letter-spacing="1">时间戳</text>
+        <text x="266" y="49" fill="#F4F1FF" font-size="18">03:10 · 08:20 · 14:40</text>
+      </g>
+      <text x="0" y="273" fill="#A9A2C8" font-size="18" font-weight="700" letter-spacing="1">证据标签</text>
+      <g transform="translate(0 287)" font-size="18" font-weight="650">
+        <rect width="140" height="34" rx="17" fill="#7668FF" fill-opacity="0.22"/><text x="70" y="23" fill="#F4F1FF" text-anchor="middle">来源陈述</text>
+        <rect x="148" width="160" height="34" rx="17" fill="#7668FF" fill-opacity="0.22"/><text x="228" y="23" fill="#F4F1FF" text-anchor="middle">创作者观点</text>
+        <rect x="316" width="126" height="34" rx="17" fill="#35C7A5" fill-opacity="0.16"/><text x="379" y="23" fill="#35C7A5" text-anchor="middle">合理推导</text>
+      </g>
+      <path d="M450 304 H476" stroke="#35C7A5" stroke-width="2"/><circle cx="476" cy="304" r="4" fill="#35C7A5"/>
+    </g>
+
+    <g transform="translate(640 146)">
+      <circle cx="9" cy="10" r="7" fill="#7668FF"/>
+      <text x="30" y="18" fill="#F4F1FF" font-size="22" font-weight="700">全局概念</text>
+      <text x="464" y="18" fill="#A9A2C8" font-size="14" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end">example-concept-note.md</text>
+
+      <rect x="0" y="42" width="488" height="92" rx="12" fill="#7668FF" fill-opacity="0.22" stroke="#7668FF" stroke-width="1.5"/>
+      <text x="22" y="84" fill="#F4F1FF" font-size="32" font-weight="750">[[RAG]]</text>
+      <text x="22" y="113" fill="#A9A2C8" font-size="18">规范概念 · 多来源</text>
+      <g transform="translate(314 58)">
+        <text x="0" y="17" fill="#A9A2C8" font-size="18" font-weight="700" letter-spacing="1">别名</text>
+        <text x="0" y="42" fill="#F4F1FF" font-size="16">Retrieval-Augmented</text>
+        <text x="0" y="63" fill="#F4F1FF" font-size="16">Generation</text>
+      </g>
+
+      <g transform="translate(0 144)">
+        <rect width="210" height="72" rx="12" fill="#F4F1FF" fill-opacity="0.04" stroke="#A9A2C8" stroke-opacity="0.38"/>
+        <text x="18" y="24" fill="#A9A2C8" font-size="18" font-weight="700" letter-spacing="0.5">关联概念</text>
+        <text x="18" y="49" fill="#F4F1FF" font-size="18">[[LLM]] · [[Embedding]]</text>
+        <path d="M210 32 H222" stroke="#7668FF" stroke-width="2"/>
+        <rect x="222" width="266" height="72" rx="12" fill="#F4F1FF" fill-opacity="0.04" stroke="#A9A2C8" stroke-opacity="0.38"/>
+        <text x="240" y="24" fill="#A9A2C8" font-size="18" font-weight="700" letter-spacing="0.5">来源归属</text>
+        <text x="240" y="48" fill="#F4F1FF" font-size="18">来源笔记 · 位置</text>
+        <text x="240" y="68" fill="#A9A2C8" font-size="18">解释</text>
+      </g>
+      <g transform="translate(0 226)">
+        <rect width="238" height="80" rx="12" fill="#35C7A5" fill-opacity="0.14" stroke="#35C7A5"/>
+        <text x="18" y="26" fill="#35C7A5" font-size="18" font-weight="750" letter-spacing="1">共识</text>
+        <text x="18" y="52" fill="#F4F1FF" font-size="18">先找证据，再生成</text>
+        <text x="18" y="70" fill="#A9A2C8" font-size="14">跨来源共享</text>
+        <rect x="250" width="238" height="80" rx="12" fill="#7668FF" fill-opacity="0.10" stroke="#7668FF"/>
+        <text x="268" y="26" fill="#F4F1FF" font-size="18" font-weight="750" letter-spacing="1">分歧</text>
+        <text x="268" y="52" fill="#F4F1FF" font-size="18">检索策略</text>
+        <text x="268" y="70" fill="#A9A2C8" font-size="14">分开保留 · 后续核验</text>
+      </g>
+    </g>
+
+  </g>
+</svg>

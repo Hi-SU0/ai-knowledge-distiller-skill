@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/readme/hero.svg" alt="AI Knowledge Distiller：把可靠 AI 来源转化为可追溯、去重且可持续维护的 Obsidian 知识网络" width="100%">
+  <img src="assets/readme/hero-zh.svg" alt="AI 知识蒸馏器：把可靠 AI 来源转化为可追溯、去重且可持续维护的 Obsidian 知识网络" width="100%">
 </p>
 
 [中文](README.md) | [English](README_EN.md)
@@ -9,7 +9,7 @@
 ## 先看格式证明
 
 <p align="center">
-  <img src="assets/readme/proof.svg" alt="两种互补输出：可追溯的来源笔记与跨来源更新的全局概念笔记" width="100%">
+  <img src="assets/readme/proof-zh.svg" alt="两种互补输出：可追溯的来源笔记与跨来源更新的全局概念笔记" width="100%">
 </p>
 
 [查看来源笔记格式示例](examples/example-source-note.md) · [查看全局概念笔记格式示例](examples/example-concept-note.md)
@@ -25,7 +25,7 @@
 ## 工作流程
 
 <p align="center">
-  <img src="assets/readme/workflow.svg" alt="五步知识蒸馏流程：获取来源、核验证据、重构知识、全局去重、持续维护" width="100%">
+  <img src="assets/readme/workflow-zh.svg" alt="五步知识蒸馏流程：获取来源、核验证据、重构知识、全局去重、持续维护" width="100%">
 </p>
 
 1. **SOURCE · 获取来源**：优先使用官方字幕、原始文章或论文、官方文档和仓库代码。
